@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RugbyQuiz</string>
+    <string name="question_1">1. Give the correct spelling of the italian national rugby team\'s nickname.</string>
+    <string name="question_2">2. Which country has won the most Rugby World Cups?</string>
+    <string name="question_3">3. Which country(ies) form part of the Six nations?</string>
+    <string name="question_4">4. Who was the captain of the Springbok team which won the 2007 Rugby World Cup?</string>
+    <string name="question_5">5. Which of these methods of scoring is worth the most points?</string>
+    <string name="answer">Answer</string>
+    <string name="england">England</string>
+    <string name="ireland">Ireland</string>
+    <string name="new_zealand">New Zeland</string>
+    <string name="south_africa">South Africa</string>
+    <string name="jean_de_villiers">Jean de Villiers</string>
+    <string name="john_smit">John Smit</string>
+    <string name="richie_mccaw">Richie McCaw</string>
+    <string name="siya_kolisi">Siya Kolisi</string>
+    <string name="conersion">Conversion</string>
+    <string name="drop_goal">Drop Goal</string>
+    <string name="penalty">Penalty Goal</string>
+    <string name="try_score">Try</string>
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+</resources>
