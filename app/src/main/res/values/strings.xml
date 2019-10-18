@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RugbyQuiz</string>
+    <string name="app_name">Rugby Quiz</string>
     <string name="question_1">1. Give the correct spelling of the italian national rugby team\'s nickname.</string>
     <string name="question_2">2. Which country has won the most Rugby World Cups?</string>
     <string name="question_3">3. Which country(ies) form part of the Six nations?</string>

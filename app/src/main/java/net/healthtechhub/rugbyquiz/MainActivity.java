@@ -11,10 +11,17 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editText1;
-    private RadioButton rb2_1, rb2_2, rb2_3, rb2_4, rb4_1, rb4_2, rb4_3, rb4_4, rb5_1, rb5_2, rb5_3, rb5_4;
-    private RadioGroup rg2, rg4, rg5;
-    private CheckBox cb3_1, cb3_2, cb3_3, cb3_4;
+    private EditText Qtn1EditText;
+    private RadioButton Qtn2RadioBtnNZ;
+    private RadioButton Qtn4RadioBtnJohn;
+    private RadioButton Qtn5RadioBtnTry;
+    private RadioGroup Qtn2RadioGroup;
+    private RadioGroup Qtn4RadioGroup;
+    private RadioGroup Qtn5RadioGroup;
+    private CheckBox Qtn3CheckBoxEng;
+    private CheckBox Qtn3CheckBoxIre;
+    private CheckBox Qtn3CheckBoxNZ;
+    private CheckBox Qtn3RadioGroup;
     private int correctAnswers;
 
     @Override
@@ -23,34 +30,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Question 1 definition
-        editText1 = findViewById(R.id.answer1);
+        Qtn1EditText = findViewById(R.id.answer1);
 
         // Question 2 definitions
-        rb2_1 = findViewById(R.id.radioBtnEng);
-        rb2_2 = findViewById(R.id.radioBtnIre);
-        rb2_3 = findViewById(R.id.radioBtnNZ);
-        rb2_4 = findViewById(R.id.radioBtnSA);
-        rg2 = findViewById(R.id.radioGroupQ2);
+        Qtn2RadioBtnNZ = findViewById(R.id.radioBtnNZ);
+        Qtn2RadioGroup = findViewById(R.id.radioGroupQ2);
 
         // Question 3 definitions
-        cb3_1 = findViewById(R.id.checkBoxEng);
-        cb3_2 = findViewById(R.id.checkBoxIre);
-        cb3_3 = findViewById(R.id.checkBoxNZ);
-        cb3_4 = findViewById(R.id.checkBoxSA);
+        Qtn3CheckBoxEng = findViewById(R.id.checkBoxEng);
+        Qtn3CheckBoxIre = findViewById(R.id.checkBoxIre);
+        Qtn3CheckBoxNZ = findViewById(R.id.checkBoxNZ);
+        Qtn3RadioGroup = findViewById(R.id.checkBoxSA);
 
         // Question 4 definitions
-        rb4_1 = findViewById(R.id.radioBtnJean);
-        rb4_2 = findViewById(R.id.radioBtnJohn);
-        rb4_3 = findViewById(R.id.radioBtnRichie);
-        rb4_4 = findViewById(R.id.radioBtnSiya);
-        rg4 = findViewById(R.id.radioGroupQ4);
+        Qtn4RadioBtnJohn = findViewById(R.id.radioBtnJohn);
+        Qtn4RadioGroup = findViewById(R.id.radioGroupQ4);
 
         // Question 2 definitions
-        rb5_1 = findViewById(R.id.radioBtnConv);
-        rb5_2 = findViewById(R.id.radioBtnDrop);
-        rb5_3 = findViewById(R.id.radioBtnPen);
-        rb5_4 = findViewById(R.id.radioBtnTry);
-        rg5 = findViewById(R.id.RadioGroupQ5);
+        Qtn5RadioBtnTry = findViewById(R.id.radioBtnTry);
+        Qtn5RadioGroup = findViewById(R.id.RadioGroupQ5);
 
         // Variable definitions
         correctAnswers = 0;
@@ -58,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean checkQuestion1() {
         boolean isCorrect = false;
-        String givenAnswer = editText1.getText().toString();
+        String givenAnswer = Qtn1EditText.getText().toString();
         String correctAnswer = "Azzurri";
 
-        if (givenAnswer.toLowerCase().equals(correctAnswer.toLowerCase()))
+        if (givenAnswer.equalsIgnoreCase(correctAnswer))
             isCorrect = true;
 
         return isCorrect;
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkQuestion2() {
         boolean isCorrect = false;
 
-        if (rb2_3.isChecked()) {
+        if (Qtn2RadioBtnNZ.isChecked()) {
             isCorrect = true;
         }
 
@@ -80,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkQuestion3() {
         boolean isCorrect = false;
 
-        if (cb3_1.isChecked() && cb3_2.isChecked() && !cb3_3.isChecked() && !cb3_4.isChecked()) {
+        if (Qtn3CheckBoxEng.isChecked() && Qtn3CheckBoxIre.isChecked() && !Qtn3CheckBoxNZ.isChecked() && !Qtn3RadioGroup.isChecked()) {
             isCorrect = true;
         }
 
@@ -90,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkQuestion4() {
         boolean isCorrect = false;
 
-        if (rb4_2.isChecked()) {
+        if (Qtn4RadioBtnJohn.isChecked()) {
             isCorrect = true;
         }
 
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean checkQuestion5() {
         boolean isCorrect = false;
 
-        if (rb5_4.isChecked()) {
+        if (Qtn5RadioBtnTry.isChecked()) {
             isCorrect = true;
         }
 
@@ -128,16 +126,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetQuiz(View view) {
-        editText1.setText("");
+        Qtn1EditText.setText("");
 
-        rg2.clearCheck();
-        rg4.clearCheck();
-        rg5.clearCheck();
+        Qtn2RadioGroup.clearCheck();
+        Qtn4RadioGroup.clearCheck();
+        Qtn5RadioGroup.clearCheck();
 
-        cb3_1.setChecked(false);
-        cb3_2.setChecked(false);
-        cb3_3.setChecked(false);
-        cb3_4.setChecked(false);
+        Qtn3CheckBoxEng.setChecked(false);
+        Qtn3CheckBoxIre.setChecked(false);
+        Qtn3CheckBoxNZ.setChecked(false);
+        Qtn3RadioGroup.setChecked(false);
 
         correctAnswers = 0;
     }
